@@ -38,12 +38,32 @@ import Hero from './components/learning-example/Hero';
 import ErrorBoundary from './components/learning-example/ErrorBoundary';
 import ClickCounter from './components/learning-example/ClickCounter';
 import HoverCounter from './components/learning-example/HoverCounter';
+import ClickCounterTwo from './components/learning-example/ClickCounterTwo';
+import HoverCounterTwo from './components/learning-example/HoverCounterTwo';
+import User from './components/learning-example/User';
+import CounterTwo from './components/learning-example/CounterTwo';
 function App() {
   return (
     <div className="App">
-      <ClickCounter name="Shiva"/>
-      <HoverCounter/>
+      <CounterTwo
+					render={(count, incrementCount) =>
+					<ClickCounterTwo
+						count={count}
+						incrementCount={incrementCount}>
+					</ClickCounterTwo>}>
+				</CounterTwo>
+    <CounterTwo render={(count,increamentCount)=>(<ClickCounterTwo count={count} increamentCount={increamentCount} ></ClickCounterTwo>)}/>
+
+    <CounterTwo render={(count,increamentCount)=>(
+    <HoverCounterTwo count={count} increamentCount={increamentCount}>
+    </HoverCounterTwo>)}>
+    </CounterTwo>
  {/*
+ <ClickCounterTwo></ClickCounterTwo>
+      <HoverCounterTwo></HoverCounterTwo>
+      <User render={(isLogedIn)=> isLogedIn ? 'shiva' :'Guest'}></User>
+ <ClickCounter name="Shiva"/>
+      <HoverCounter/>
   <ErrorBoundary>
      <Hero heroName="Batman"/>
      </ErrorBoundary>
