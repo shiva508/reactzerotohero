@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 
  class ClickCounterTwo extends Component {
 
-    
-    render() {
-        const {count,increamentCount}=this.props
-        return <button onClick={increamentCount}>  Clicks Count {count}</button>
+render(){
+        return (
+            <div>
+            <button onClick={this.props.increamentCount}>  Clicks Count {this.props.count}</button>
+            </div>
+        )
     }
 }
 

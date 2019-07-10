@@ -19,7 +19,7 @@ export class CounterTwo extends Component {
     render() {
         return (
             <div>
-               {this.props.render(this.state.count,this.state.increamentCount)} 
+               {this.props.render(this.state.count,this.increamentCount)} 
             </div>
         )
     }

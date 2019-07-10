@@ -42,23 +42,19 @@ import ClickCounterTwo from './components/learning-example/ClickCounterTwo';
 import HoverCounterTwo from './components/learning-example/HoverCounterTwo';
 import User from './components/learning-example/User';
 import CounterTwo from './components/learning-example/CounterTwo';
+import PostList from './components/learning-example/PostList';
+import PostForm from './components/learning-example/PostForm'
 function App() {
   return (
     <div className="App">
-      <CounterTwo
-					render={(count, incrementCount) =>
-					<ClickCounterTwo
-						count={count}
-						incrementCount={incrementCount}>
-					</ClickCounterTwo>}>
-				</CounterTwo>
-    <CounterTwo render={(count,increamentCount)=>(<ClickCounterTwo count={count} increamentCount={increamentCount} ></ClickCounterTwo>)}/>
+     
+      <PostForm/>
+  
 
-    <CounterTwo render={(count,increamentCount)=>(
-    <HoverCounterTwo count={count} increamentCount={increamentCount}>
-    </HoverCounterTwo>)}>
-    </CounterTwo>
  {/*
+  <PostList/>
+  <CounterTwo  render={(count,increamentCount)=><ClickCounterTwo count={count} increamentCount={increamentCount}></ClickCounterTwo>}> </CounterTwo>
+   <CounterTwo render={(count,increamentCount)=><HoverCounterTwo count={count} increamentCount={increamentCount}></HoverCounterTwo>}></CounterTwo>
  <ClickCounterTwo></ClickCounterTwo>
       <HoverCounterTwo></HoverCounterTwo>
       <User render={(isLogedIn)=> isLogedIn ? 'shiva' :'Guest'}></User>
