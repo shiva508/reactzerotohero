@@ -49,6 +49,7 @@ function App() {
     <div className="App">
      
       <PostForm/>
+      <PostList/>
   
 
  {/*
