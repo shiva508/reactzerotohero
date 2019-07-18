@@ -48,12 +48,16 @@ import DashBoard from './components/todo/DashBoard';
 import Header from './components/Layout/Header';
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'font-awesome/css/font-awesome.min.css';
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import AddProject from './components/todo/AddProject';
 function App() {
   return (
     <div className="App">
-     
+  <Router>
     <Header/>
-  <DashBoard/>
+    <Route exact path="/dashboard" component={DashBoard}/>
+    <Route exact path="/addProject" component={AddProject}/>
+  </Router>
  {/*
    <PostForm/>
       <PostList/>
