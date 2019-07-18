@@ -1,6 +1,6 @@
 import React ,{Component} from 'react'
 import FirstComponent ,{SecondComponent} from './components/learning-example/FirstComponent'
-import EmployeTable ,{TableRow,Header} from './components/learning-example/EmployeTable'
+import EmployeTable ,{TableRow} from './components/learning-example/EmployeTable'
 import Welcome  from './components/learning-example/Welcome'
 import Hello  from './components/learning-example/Hello'
 import Bye  from './components/learning-example/Bye'
@@ -44,15 +44,19 @@ import User from './components/learning-example/User';
 import CounterTwo from './components/learning-example/CounterTwo';
 import PostList from './components/learning-example/PostList';
 import PostForm from './components/learning-example/PostForm'
+import DashBoard from './components/todo/DashBoard';
+import Header from './components/Layout/Header';
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'font-awesome/css/font-awesome.min.css';
 function App() {
   return (
     <div className="App">
      
-      <PostForm/>
-      <PostList/>
-  
-
+    <Header/>
+  <DashBoard/>
  {/*
+   <PostForm/>
+      <PostList/>
   <PostList/>
   <CounterTwo  render={(count,increamentCount)=><ClickCounterTwo count={count} increamentCount={increamentCount}></ClickCounterTwo>}> </CounterTwo>
    <CounterTwo render={(count,increamentCount)=><HoverCounterTwo count={count} increamentCount={increamentCount}></HoverCounterTwo>}></CounterTwo>
