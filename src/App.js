@@ -50,15 +50,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import 'font-awesome/css/font-awesome.min.css';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import AddProject from './components/todo/AddProject';
+import {Provider} from 'react-redux';
+import store from './Store';
 function App() {
   return (
-    <div className="App">
+ <Provider store={store}>
   <Router>
+       <div className="App">
     <Header/>
     <Route exact path="/dashboard" component={DashBoard}/>
     <Route exact path="/addProject" component={AddProject}/>
+     </div>
   </Router>
- {/*
+  </Provider>
+ /*{
    <PostForm/>
       <PostList/>
   <PostList/>
@@ -107,8 +112,8 @@ function App() {
  <FunctionClick></FunctionClick>
  <Counter></Counter>
  <Welocome2 java='JAVA' react='REACT'></Welocome2>
- <Welcome0 name='Shiva' id='408'></Welcome0>*/}
-   {/*
+ <Welcome0 name='Shiva' id='408'></Welcome0>}*/
+  /* {
      <Message></Message>
       <Hello/>
     Hello Application
@@ -122,8 +127,8 @@ function App() {
     <Header></Header>
     <Bye name="Shiva"/>
     <Bye name="Satish"/>
-   <EmployeTable/>*/}
-    </div>
+   <EmployeTable/>}*/
+   
   );
 }
 
